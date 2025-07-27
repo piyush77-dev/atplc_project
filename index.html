@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>webp
+
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .parallax-container {
+      position: relative;
+      height: 110vh; /* reduced from 150vh */
+      overflow: hidden;
+    }
+
+    .parallax-image {
+      position: sticky;
+      top: 2rem;
+      height: calc(100vh - 4rem);
+      background-size: cover;
+      background-position: center;
+      border-radius: 1.5rem;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      will-change: transform, opacity;
+    }
+
+    .parallax-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+      transition: opacity 0.3s ease-out;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .cursor-follower {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    background-color: rgba(99, 102, 241, 0.5); /* Indigo glow */
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: difference;
+  }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="px-4 space-y-32">
+
+    <!-- Section 1 -->
+    <div class="parallax-container">
+      <div class="parallax-image" data-img style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000');">
+        <div class="parallax-overlay"></div>
+      </div>
+      <div class="overlay-text">
+        <p class="mb-2 text-xl md:text-3xl">Collaborate</p>
+        <p class="text-4xl font-bold md:text-6xl">Built for all of us.</p>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 px-4 pb-12">
+      <h2 class="text-3xl font-bold md:col-span-4">Work Together Smarter</h2>
+      <div class="md:col-span-8 text-lg text-gray-700 space-y-4">
+        <p>
+          Collaboration is the key to innovation. Our tools are built for people who work across time zones and borders.
+        </p>
+        <p>
+          Whether you're designing, coding, or planning — do it together, seamlessly.
+        </p>
+        <p>
+          Build a culture of openness and creative synergy. Invite everyone in.
+        </p>
+        <p>
+          Empower your team with real-time updates, intelligent comments, and a workflow that's actually enjoyable.
+        </p>
+        <button class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">
+          Learn more →
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="parallax-container">
+      <div class="parallax-image" data-img style="background-image: url('https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?auto=format&fit=crop&w=2000');">
+        <div class="parallax-overlay"></div>
+      </div>
+      <div class="overlay-text">
+        <p class="mb-2 text-xl md:text-3xl">Quality</p>
+        <p class="text-4xl font-bold md:text-6xl">Never Compromise.</p>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 px-4 pb-12">
+      <h2 class="text-3xl font-bold md:col-span-4">Only the Best Materials</h2>
+      <div class="md:col-span-8 text-lg text-gray-700 space-y-4">
+        <p>
+          We obsess over detail and materials so you don't have to. Everything we produce is tested, refined, and perfected.
+        </p>
+        <p>
+          Quality doesn’t have to be expensive — it just has to be done right.
+        </p>
+        <p>
+          Whether it’s the stitching, the codebase, or the customer service — excellence is our baseline.
+        </p>
+        <button class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">
+          Explore Quality →
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="parallax-container">
+      <div class="parallax-image" data-img style="background-image: url('https://images.unsplash.com/photo-1504610926078-a1611febcad3?auto=format&fit=crop&w=2000');">
+        <div class="parallax-overlay"></div>
+      </div>
+      <div class="overlay-text">
+        <p class="mb-2 text-xl md:text-3xl">Modern</p>
+        <p class="text-4xl font-bold md:text-6xl">Dress for the Best.</p>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 px-4 pb-12">
+      <h2 class="text-3xl font-bold md:col-span-4">Stay Ahead in Style</h2>
+      <div class="md:col-span-8 text-lg text-gray-700 space-y-4">
+        <p>
+          Modern means adaptable. It means relevant. It means you move with the times — and sometimes ahead of them.
+        </p>
+        <p>
+          From fashion to frontend, our work reflects the now — and the next.
+        </p>
+        <p>
+          Choose looks that speak for you. Sleek, bold, minimal, expressive. We’ve got it.
+        </p>
+        <button class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">
+          Browse Looks →
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-10 mt-24">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+      <p class="text-lg">&copy; 2025 YourBrand. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Terms</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </div>
+    </div>
+  </footer>
+ <button class="group relative flex items-center gap-2 text-lg font-semibold">
+  Learn More
+  <span class="cursor-target text-indigo-500 transition-transform group-hover:translate-x-1">
+    →
+  </span>
+</button>
+
+
+
+  <script>
+    const sections = document.querySelectorAll("[data-img]");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+
+      sections.forEach((img) => {
+        const overlay = img.querySelector(".parallax-overlay");
+        const text = img.nextElementSibling;
+
+        const imgTop = img.getBoundingClientRect().top + window.scrollY;
+        const progress = (scrollTop - imgTop + 400) / 1000;
+
+        const scale = Math.max(0.85, 1 - progress * 0.2);
+        const opacity = Math.max(0, 1 - progress * 1.5);
+        const yOffset = progress * 150;
+
+        img.style.transform = `scale(${scale})`;
+        overlay.style.opacity = opacity;
+        text.style.transform = `translateY(${yOffset}px)`;
+        text.style.opacity = opacity;
+      });
+    });
+
+    const circle = document.getElementById("circleCursor");
+  const targets = document.querySelectorAll(".cursor-target");
+
+  targets.forEach(target => {
+    target.addEventListener("mouseenter", () => {
+      circle.style.opacity = "1";
+      document.addEventListener("mousemove", moveCircle);
+    });
+
+    target.addEventListener("mouseleave", () => {
+      circle.style.opacity = "0";
+      document.removeEventListener("mousemove", moveCircle);
+    });
+  });
+
+  function moveCircle(e) {
+    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY}px`;
+  }
+  </script>
+
+</body>
+</html>
